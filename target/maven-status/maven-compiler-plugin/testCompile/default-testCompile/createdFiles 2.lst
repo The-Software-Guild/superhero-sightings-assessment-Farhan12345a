@@ -1,0 +1,6 @@
+com/fs/superherosighting/dao/LocationDaoDBTest.class
+com/fs/superherosighting/dao/SuperHeroVillanDaoDBTest.class
+com/fs/superherosighting/dao/SightingDaoDBTest.class
+com/fs/superherosighting/dao/SuperpowerDaoDBTest.class
+com/fs/superherosighting/dao/OrganizationDaoDBTest.class
+com/fs/superherosighting/SuperherosightingApplicationTests.class

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.fs.superherosighting.dao.LocationDaoDBTest" time="0.059" tests="4" errors="4" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="16.0.2+7-67"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/farhanshahbaz/Documents/repos/superhero-sightings-assessment-Farhan12345a/superherosighting"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/farhanshahbaz/Documents/repos/superhero-sightings-assessment-Farhan12345a/superherosighting"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="16.0.2+7-67"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/_q/21rwh2rj2976vvvt6fgn02k80000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="maven.ext.class.path" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/farhanshahbaz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="60.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="11.5"/>
+    <property name="library.jansi.path" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/maven/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/farhanshahbaz"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="16"/>
+    <property name="user.name" value="farhanshahbaz"/>
+    <property name="java.class.path" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/maven/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/maven-nblib/netbeans-eventspy.jar clean install"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="16.0.2"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-07-20"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testGetAlllocations" classname="com.fs.superherosighting.dao.LocationDaoDBTest" time="0.012">
+    <error message="PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))" type="org.springframework.dao.DataIntegrityViolationException">org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+</error>
+    <system-out><![CDATA[2021-08-29 18:40:42.654  INFO 16243 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.fs.superherosighting.dao.LocationDaoDBTest], using SpringBootContextLoader
+2021-08-29 18:40:42.655  INFO 16243 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.fs.superherosighting.dao.LocationDaoDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-08-29 18:40:42.655  INFO 16243 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.fs.superherosighting.dao.LocationDaoDBTest]: LocationDaoDBTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-08-29 18:40:42.657  INFO 16243 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.fs.superherosighting.SuperherosightingApplication for test class com.fs.superherosighting.dao.LocationDaoDBTest
+2021-08-29 18:40:42.659  INFO 16243 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-08-29 18:40:42.660  INFO 16243 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@60fc7f43, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16e195cf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3212d853, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@74c7522c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77c23d90, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d17914a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@49631cfb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77b71c9, org.springframework.test.context.event.EventPublishingTestExecutionListener@6133e20b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@30ffb2a6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@612af486, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3d033453, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@43deba42, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@e795a1d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@38c10190]
+]]></system-out>
+  </testcase>
+  <testcase name="testDeletelocationById" classname="com.fs.superherosighting.dao.LocationDaoDBTest" time="0.01">
+    <error message="PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))" type="org.springframework.dao.DataIntegrityViolationException">org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+</error>
+  </testcase>
+  <testcase name="testUpdatelocation" classname="com.fs.superherosighting.dao.LocationDaoDBTest" time="0.011">
+    <error message="PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))" type="org.springframework.dao.DataIntegrityViolationException">org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+</error>
+  </testcase>
+  <testcase name="testAddAndGetlocation" classname="com.fs.superherosighting.dao.LocationDaoDBTest" time="0.009">
+    <error message="PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))" type="org.springframework.dao.DataIntegrityViolationException">org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [DELETE FROM sighting WHERE location_id = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`superherosightingdbtest`.`super_sighting`, CONSTRAINT `super_sighting_ibfk_2` FOREIGN KEY (`sighting_id`) REFERENCES `sighting` (`sighting_id`))
+	at com.fs.superherosighting.dao.LocationDaoDBTest.setUp(LocationDaoDBTest.java:52)
+</error>
+  </testcase>
+</testsuite>

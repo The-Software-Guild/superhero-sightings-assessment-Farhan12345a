@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.fs.superherosighting.dao.SuperHeroVillanDaoDBTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.805 sec <<< FAILURE! - in com.fs.superherosighting.dao.SuperHeroVillanDaoDBTest
+testDeleteHeroById  Time elapsed: 0.059 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <com.fs.superherosighting.entities.SuperHeroVillan@9da7fa53> but was: <com.fs.superherosighting.entities.SuperHeroVillan@9da7b4fc>
+	at com.fs.superherosighting.dao.SuperHeroVillanDaoDBTest.testDeleteHeroById(SuperHeroVillanDaoDBTest.java:378)
+
+testGetAllorganizations  Time elapsed: 0.059 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.fs.superherosighting.dao.SuperHeroVillanDaoDBTest.testGetAllorganizations(SuperHeroVillanDaoDBTest.java:243)
+
