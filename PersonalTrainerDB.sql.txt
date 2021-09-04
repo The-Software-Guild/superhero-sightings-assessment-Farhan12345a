@@ -1,0 +1,54 @@
+DROP DATABASE IF EXISTS PersonalTrainerDBTest;
+CREATE DATABASE PersonalTrainerDBTest;
+USE PersonalTrainerDBTest;
+
+CREATE TABLE workout(
+    workout_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    target_muscle VARCHAR(50) NOT NULL,
+    equipment VARCHAR(100) NOT NULL,
+    CONSTRAINT pk_workout_id
+        PRIMARY KEY (workout_id)
+);
+
+CREATE TABLE client(
+    client_id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(45) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
+    age INT NOT NULL,
+    height INT NOT NULL,
+    weight INT NOT NULL,
+    CONSTRAINT pk_client_id
+    	PRIMARY KEY (client_id)
+);
+
+CREATE TABLE trainer(
+    trainer_id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(40) NOT NULL,
+    last_name VARCHAR(40) NOT NULL,
+    age INT NOT NULL,
+    years_of_experience INT NOT NULL,
+    isAvailable BOOLEAN NOT NULL,
+    workout_id INT NOT NULL,
+    CONSTRAINT pk_trainer_id
+    	PRIMARY KEY (trainer_id),
+	FOREIGN KEY (workout_id) REFERENCES workout(workout_id)
+);
+
+
+
+CREATE TABLE trainer_client(
+	trainer_id INT,
+    client_id INT,
+    CONSTRAINT pk_trainer_client
+    	PRIMARY KEY (trainer_id, client_id),
+    CONSTRAINT FOREIGN KEY fk_trainer_id(trainer_id)
+        REFERENCES trainer(trainer_id),
+    CONSTRAINT FOREIGN KEY fk_client_id(client_id)
+        REFERENCES client(client_id)
+);
+
+
+
+
+

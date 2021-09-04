@@ -1,0 +1,104 @@
+DROP DATABASE IF EXISTS SuperheroSightingDB;
+CREATE DATABASE SuperheroSightingDB;
+USE SuperheroSightingDB;
+
+CREATE TABLE superpower(
+    superpower_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(40) NOT NULL,
+    CONSTRAINT pk_superpower_id
+    	PRIMARY KEY (superpower_id)
+);
+
+
+CREATE TABLE organization(
+    organization_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    description VARCHAR(200) NOT NULL,
+    address VARCHAR(200) NOT NULL,
+    contact VARCHAR(200) NOT NULL,
+    ishero VARCHAR(10),
+    CONSTRAINT pk_organization_id
+    	PRIMARY KEY (organization_id)
+);
+
+CREATE TABLE location(
+	location_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    latitude VARCHAR(100) NOT NULL,
+    longitude VARCHAR(100) NOT NULL,
+    description VARCHAR(45) NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    CONSTRAINT pk_location_id
+    	PRIMARY KEY (location_id)
+);
+
+
+
+CREATE TABLE superhero_supervillan (
+    super_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    description VARCHAR(200) NOT NULL,
+    superpower_id INT NOT NULL,
+    ishero BOOLEAN NOT NULL,
+    CONSTRAINT pk_super_id
+        PRIMARY KEY (super_id),
+	CONSTRAINT FOREIGN KEY fk_superpower_id(superpower_id)
+        REFERENCES superpower(superpower_id)
+);
+
+
+CREATE TABLE superhero_supervillan_organization(
+    super_id INT,
+    organization_id INT,
+    CONSTRAINT pk_superhero_supervillan_organization
+    	PRIMARY KEY (super_id, organization_id),
+    CONSTRAINT FOREIGN KEY fk_super_id(super_id)
+        REFERENCES superhero_supervillan(super_id),
+    CONSTRAINT FOREIGN KEY fk_organization(organization_id)
+        REFERENCES organization(organization_id)
+);
+
+
+CREATE TABLE sighting(
+    sighting_id INT NOT NULL AUTO_INCREMENT,
+    date VARCHAR(20) NOT NULL,
+    location_id INT NOT NULL,
+    CONSTRAINT pk_sighting_id 
+    	PRIMARY KEY (sighting_id),
+	CONSTRAINT fk_location_id
+		FOREIGN KEY (location_id)
+        REFERENCES location(location_id)
+);
+
+CREATE TABLE super_sighting(
+    super_id INT,
+    sighting_id INT,
+    CONSTRAINT pk_superhero_supervillan_sighting
+    	PRIMARY KEY (super_id, sighting_id),
+    CONSTRAINT FOREIGN KEY fk_super_id(super_id)
+        REFERENCES superhero_supervillan(super_id),
+    CONSTRAINT FOREIGN KEY fk_sighting(sighting_id)
+        REFERENCES sighting(sighting_id)
+);
+
+/**
+insert into superpower values (1, "fire"); 
+insert into superpower values (2, "ice"); 
+insert into superhero_supervillan values (1,'Batman','good hero', 1, true);
+
+
+
+insert into organization values (1,'Batcave','underground', '22 Apple Street', '5176474335',true);
+
+insert into superhero_supervillan_organization values(1,1);
+insert into location values (1, 'asdf' , 'asdfwef' ,'qdwqw', "232322", "23.43430");
+insert into sighting values (1, '9999-12-31 23:59:59', 1);
+insert into sighting values (2, '9999-12-31 23:59:59', 1);
+insert into sighting values (3, '9999-12-31 23:59:59', 1);
+insert into sighting values (4, '9999-12-31 23:59:59', 1);
+insert into sighting values (5, '9999-12-31 23:59:59', 1);
+insert into sighting values (6, '9999-12-31 23:59:59', 1);
+
+insert into super_sighting values(1,1);
+
+**/
